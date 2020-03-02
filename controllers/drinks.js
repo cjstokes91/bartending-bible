@@ -9,8 +9,8 @@ module.exports = {
 }
 
 function index(req, res) { 
-    Drink.find({}, function(err, drinks){ 
-        res.render('drinks/index', {title: 'All Drinks', drinks});
+    Drink.find({user: req.user._id}, function(err, drinks){ 
+        res.render('drinks/index', {title: 'My Drinks', drinks, user: req.user});
     });
 }
 
@@ -20,7 +20,8 @@ function newDrink(req, res) {
 }
 
 function create(req, res) { 
-    const drink = new Drink(req.body); 
+    const drink = new Drink(req.body);
+    drink.user = req.user._id; 
     drink.save(function(err){ 
         if(err) { 
             res.redirect('/drinks/new')
@@ -31,7 +32,7 @@ function create(req, res) {
 } 
 
 function show(req, res) { 
-    Drink.findById({}, function(err, drink){ 
+    Drink.findById(req.params.id, function(err, drink){ 
         res.render('drinks/show', {drink})
     });
 }

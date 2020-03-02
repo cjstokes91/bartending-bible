@@ -4,6 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 
 // load the env vars
 require('dotenv').config();
@@ -19,7 +20,7 @@ require('./config/passport');
 
 // require our routes
 var indexRoutes = require('./routes/index');
-var usersRoutes = require('./routes/users');
+var drinksRoutes = require('./routes/drinks');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +31,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: 'SEIRocks!',
@@ -41,7 +43,7 @@ app.use(passport.session());
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-app.use('/', usersRoutes);
+app.use('/drinks', drinksRoutes);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
