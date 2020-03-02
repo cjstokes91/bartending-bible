@@ -1,3 +1,13 @@
 <%- include("../partials/header") %>
 <h1><%= title %></h1>
+<a href="/drinks/new">Add New Drink</a>
+<ul>
+    <% drinks.forEach(d => { %>
+     <li>  <%=  d.name %> </li>
+     <li>  <%=  d.alcohol %> </li>
+     <li>  <%=  d.mix %> </li>
+     <li>  <%=  d.instructions %> </li>
+    <% }) %>
+
+</ul>
 <%- include("../partials/footer") %>

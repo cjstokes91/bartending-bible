@@ -9,13 +9,13 @@ module.exports = {
 }
 
 function index(req, res) { 
-    Drink.find({user: req.user._id}, function(err, drinks){ 
-        res.render('drinks/index', {title: 'My Drinks', drinks, user: req.user});
+    Drink.find({}, function(err, drinks){ 
+        res.render('drinks/index', {title: 'All Drinks', drinks, user: req.user});
     });
 }
 
 function newDrink(req, res) { 
-    res.render('drinks/new', {title: 'Add New Drink'}); 
+    res.render('drinks/new', {title: 'New Drink', user: req.user}); 
 
 }
 
@@ -23,7 +23,8 @@ function create(req, res) {
     const drink = new Drink(req.body);
     drink.user = req.user._id; 
     drink.save(function(err){ 
-        if(err) { 
+        if(err) {
+            console.log(err)
             res.redirect('/drinks/new')
         }else{ 
             res.redirect('/drinks')

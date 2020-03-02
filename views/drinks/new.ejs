@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<%- include('../partials/header') %>
+
+<form id="new-drink-form" action="/drinks/new" method="POST">
+
+  <label>Name</label>
+  <input type="text" name="name">
+  <label>Alcohol</label>
+  <input type="text" name="alcohol">
+  <label>Mix</label>
+    <input type="text" name="mix">
+  <label>Instructions</label>
+  <input type="text" name="instructions">
+  <input type="submit" value="Add New Drink">
+</form>
+
+<%- include('../partials/footer') %>

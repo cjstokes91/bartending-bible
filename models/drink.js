@@ -19,7 +19,7 @@ const drinkSchema = new mongoose.Schema({
     },
      instructions: { 
          type: String
-     },
+     }
 });
 
 module.exports = mongoose.model("Drink", drinkSchema);
