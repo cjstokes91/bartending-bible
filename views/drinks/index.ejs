@@ -4,15 +4,19 @@
 <ul>
 
     <% drinks.forEach(d => { %>
-        <form action="/drinks/<%= d._id %>?_method=DELETE"
-            class="delete-form" method="POST">
-            <button type="submit">DELETE</button>
-          </form>
-     <li>  <%=  d.name %> </li>
-     <li>  <%=  d.alcohol %> </li>
-     <li>  <%=  d.mix %> </li>
-     <li>  <%=  d.instructions %> </li>
-     <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
+    <% if(user) { %>
+    <% if (user._id.toString() == d.user.toString()) { %>
+    <form action="/drinks/<%= d._id %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">DELETE</button>
+    </form>
+    <%  } else { %>
+    <% } %>
+    <li> <%=  d.name %> </li>
+    <li> <%=  d.alcohol %> </li>
+    <li> <%=  d.mix %> </li>
+    <li> <%=  d.instructions %> </li>
+    <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
+    <% } %>
     <% }) %>
 </ul>
 <%- include("../partials/footer") %>

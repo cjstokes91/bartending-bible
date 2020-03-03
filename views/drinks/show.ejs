@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <section id="show-page">
+  <ul>
     <div>Name</div>
     <div><%= drink.name %></div>
     <div>Alcohol</div>
@@ -8,11 +9,10 @@
     <div><%= drink.mix %></div>
     <div>Instructions</div>
     <div><%= drink.instructions %></div>
+  </ul>
 </section>
 
-
-
-<form id="edit-drink-form" action="/drinks/:id/update/<%= drink._id %>" method="POST">
+<form id="edit-drink-form" action="/drinks/<%= drink._id %>/update/" method="POST">
 
     <label>Name</label>
     <input type="text" name="name" value="<%= drink.name %>">
