@@ -1,6 +1,13 @@
 const mongoose = require('mongoose'); 
 const Schema = mongoose.Schema; 
 
+
+const commentSchema = new Schema({
+    comments: {
+        content: String,
+    }
+})
+
 const drinkSchema = new mongoose.Schema({ 
     user: { 
         type: Schema.Types.ObjectId, 
@@ -19,7 +26,8 @@ const drinkSchema = new mongoose.Schema({
     },
      instructions: { 
          type: String
-     }
+     },
+     comments: [commentSchema]
 });
 
 module.exports = mongoose.model("Drink", drinkSchema);
