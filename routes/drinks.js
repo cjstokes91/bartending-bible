@@ -6,11 +6,10 @@ router.get('/', drinksCtrl.index);
 router.get('/new', drinksCtrl.new); 
 router.get('/:id', drinksCtrl.show); 
 router.get('/drinks/:id/edit', drinksCtrl.edit);
-router.post('/update/:drinkId', function(req){
+router.post('/drinks/:id/update', function(req){
     console.log('successful')
-    console.log(req.params.drinkId)
 })
-
-router.post('/new', drinksCtrl.create); 
+router.post('/new', drinksCtrl.create);
+router.delete('/:id', drinksCtrl.delete);  
 
 module.exports = router; 
