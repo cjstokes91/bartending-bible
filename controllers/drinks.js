@@ -3,11 +3,12 @@ const Drink = require('../models/drink');
 
 module.exports = { 
     index,
-    new : newDrink,
+    new: newDrink,
     create,
-    show
+    show,
+    delete: deleteDrink,
+    edit
 }
-
 function index(req, res) { 
     Drink.find({}, function(err, drinks){ 
         res.render('drinks/index', {title: 'All Drinks', drinks, user: req.user});
@@ -34,6 +35,20 @@ function create(req, res) {
 
 function show(req, res) { 
     Drink.findById(req.params.id, function(err, drink){ 
-        res.render('drinks/show', {drink})
+        res.render('drinks/show', {drink, user: req.user})
     });
+}
+
+function deleteDrink(req, res) { 
+
+
+}
+
+function edit(req, res) { 
+    const Drink = new Drink(req.body);
+    drink
+    Drink.findById(req.params.id, function(err,drink){ 
+        if (!drink.user.equals(req.user_id)) return res.redirect('/drinks');
+        res.render('/drinks/edit', {drink});
+    })
 }

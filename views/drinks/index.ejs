@@ -3,10 +3,12 @@
 <a href="/drinks/new">Add New Drink</a>
 <ul>
     <% drinks.forEach(d => { %>
+
      <li>  <%=  d.name %> </li>
      <li>  <%=  d.alcohol %> </li>
      <li>  <%=  d.mix %> </li>
      <li>  <%=  d.instructions %> </li>
+     <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
     <% }) %>
 
 </ul>
