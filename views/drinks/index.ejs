@@ -12,9 +12,10 @@
             <%  } else { %>
             <% } %>
         <li> <%=  d.name %> </li>
+        <label>COMMENTS</label>
         <% if(d.comments.length){ %> 
             <% d.comments.forEach(c => { %>
-                <%= c.content %>
+              <li><%= c.content %></li>
            <%  }) %>
         <% } %>
         <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
