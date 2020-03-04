@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const commentSchema = new Schema({
-    comments: {
         content: String,
-    }
-})
+        rating: {type: Boolean, default:"Drink It"}
+    }, {
+});
 
 const drinkSchema = new mongoose.Schema({ 
     user: { 

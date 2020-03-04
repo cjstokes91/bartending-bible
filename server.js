@@ -21,6 +21,7 @@ require('./config/passport');
 // require our routes
 var indexRoutes = require('./routes/index');
 var drinksRoutes = require('./routes/drinks');
+var commentsRoutes = require('./routes/comments');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,6 +45,7 @@ app.use(passport.session());
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/drinks', drinksRoutes);
+app.use('/comments', commentsRoutes); 
 
 // invalid request, send 404 page
 app.use(function(req, res) {
