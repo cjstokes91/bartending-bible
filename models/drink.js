@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
         content: String,
-        rating: {type: Boolean, default:"Drink It"}
     }, {
+        timestamps: true
 });
 
 const drinkSchema = new mongoose.Schema({ 

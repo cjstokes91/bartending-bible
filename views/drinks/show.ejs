@@ -3,13 +3,13 @@
   <h1>YOUR DRINK</h1>
   <ul>
     <div><strong>NAME</strong></div>
-    <div><%= drink.name %></div>
-    <div><strong>ALCOHOL</strong></div>
+   <div><%= drink.name %></div>
+   <div><strong>ALCOHOL</strong></div>
     <div><%= drink.alcohol %></div>
     <div><strong>MIX</strong></div>
     <div><%= drink.mix %></div>
     <div><strong>INSTRUCTIONS</strong></div>
-    <div><%= drink.instructions %></div>
+    <div><%= drink.instructions %></div> 
   </ul>
 </section>
 
@@ -25,9 +25,4 @@
     <input type="submit" value="Save New Drink">
   </form>
 
-  <form id="comment-drink-form" action="/drinks/<%= drink._id %>/update/" method ="POST">
-    <label>Comments</label>
-    <textarea type="text" name="content" ></textarea>
-    <input type="submit" value="Add Comment"
-  </form>
 <%- include('../partials/footer') %>
