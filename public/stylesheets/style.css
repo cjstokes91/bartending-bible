@@ -1,7 +1,13 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: honeydew;
+  background-color: white;
+  /* background-image: url(https://i.imgur.com/4hKIjoW.jpg); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  align-content: center ;
+  margin: 0; 
+  text-align: center;
  
 }
 
@@ -10,7 +16,7 @@ a {
 }
 
 h1 { 
-  color : violet; 
+  color : white; 
   font-weight: bold;
   background-color: black;
   }
@@ -26,15 +32,18 @@ footer {
 }
 
 nav { 
+  position: fixed;
   color: green;
   font-weight: bolder;
   font-size: x-large; 
   }
 
   footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+    border: white;
    }
    
    ul li {
@@ -44,8 +53,33 @@ nav {
 
   label { 
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: large;
     color: black;
     border-style: solid;
     
   }
+  div {
+    text-align: justify;
+  }
+  #comments { 
+    font-size: medium;
+  }
+  #drinkName { 
+    color: navy;
+    font-size: xx-large;
+    text-align: center;
+  }
+  #userName  {
+    font-weight: bolder;
+    font-size: x-large;
+  }
+    
+  }
+  textarea {
+    resize: none;
+    border: 1px solid #EEEEEE;
+    box-shadow: 1px 1px 0 #DDDDDD;
+    height: 100px;
+    width: 400px;
+  }
+ 

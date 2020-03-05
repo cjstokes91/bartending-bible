@@ -20,7 +20,7 @@ function newDrink(req, res) {
 }
 function create(req, res) {
     console.log("HITTING CREATE")
-    req.body.user = req.user._id
+    req.body.user = req.user.name
     const drink = new Drink(req.body);
 
     drink.save(function (err) {
@@ -37,6 +37,7 @@ function show(req, res) {
         res.render('drinks/show', { drink, user: req.user })
     });
 }
+
 function deleteDrink(req, res) {
     // drink.user = req.user._id; 
     Drink.findByIdAndDelete(req.params.id, function (err, deleteDrink) {

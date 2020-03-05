@@ -5,13 +5,18 @@
 
     <% drinks.forEach(d => { %>
         <% if(user) { %>
-            <% if (user._id.toString() == d.user.toString()) { %>
+            <% if (user.name === d.user) { %>
             <form action="/drinks/<%= d._id %>?_method=DELETE" class="delete-form" method="POST">
                 <button type="submit">Delete Drink</button>
             </form>
             <%  } else { %>
-            <% } %>
-        <li> <%=  d.name %> </li>
+                <% } %>
+        <div id="userName">
+            <li id="drinkName"> <%=  d.name %> </li>
+        </div>
+        <li id="comments">Created by: <%= d.user %></li>
+        </div>
+        <li><%= d.ref %></li>
         <label>COMMENTS</label>
         <% if(d.comments.length){ %> 
             <% d.comments.forEach(c => { %>

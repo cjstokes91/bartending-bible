@@ -10,8 +10,8 @@ const commentSchema = new Schema({
 
 const drinkSchema = new mongoose.Schema({ 
     user: { 
-        type: Schema.Types.ObjectId, 
-        ref: "User"
+        type: String, 
+        
     },
     name: { 
         type: String, 
