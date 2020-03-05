@@ -1,24 +1,21 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
-  /* background-image: url(https://i.imgur.com/4hKIjoW.jpg); */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  align-content: center ;
-  margin: 0; 
   text-align: center;
- 
 }
 
-a {
-  color: purple;
+#newDrink  {
+  color:lightsteelblue;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-right: 75%;
 }
 
 h1 { 
   color : white; 
   font-weight: bold;
   background-color: black;
+  margin-top: 0px;
   }
 
 a:hover { 
@@ -33,7 +30,7 @@ footer {
 
 nav { 
   position: fixed;
-  color: green;
+  color: floralwhite;
   font-weight: bolder;
   font-size: x-large; 
   }
@@ -44,6 +41,7 @@ nav {
     font-size: x-large;
     font-weight: bolder;
     border: white;
+    color: white;
    }
    
    ul li {
@@ -54,17 +52,22 @@ nav {
   label { 
     font-weight: bolder;
     font-size: large;
-    color: black;
+    color: white;
+    background-color: black;
     border-style: solid;
     
   }
   div {
     text-align: justify;
   }
-  #comments { 
+  #drinksName { 
     font-size: medium;
+    background-color: gainsboro;
+    width: 25%; 
+    text-align: center;
+    margin: auto;
   }
-  #drinkName { 
+  #comments { 
     color: navy;
     font-size: xx-large;
     text-align: center;
@@ -73,8 +76,7 @@ nav {
     font-weight: bolder;
     font-size: x-large;
   }
-    
-  }
+  
   textarea {
     resize: none;
     border: 1px solid #EEEEEE;
@@ -82,4 +84,25 @@ nav {
     height: 100px;
     width: 400px;
   }
- 
+  .button, input{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:  floralwhite;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

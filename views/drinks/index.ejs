@@ -1,6 +1,6 @@
 <%- include("../partials/header") %>
 <h1><%= title %></h1>
-<a href="/drinks/new">Add New Drink</a>
+<a id="newDrink" href="/drinks/new">Add New Drink</a>
 <ul>
 
     <% drinks.forEach(d => { %>
@@ -12,9 +12,9 @@
             <%  } else { %>
                 <% } %>
         <div id="userName">
-            <li id="drinkName"> <%=  d.name %> </li>
+            <li id="comments"> <%=  d.name %> </li>
         </div>
-        <li id="comments">Created by: <%= d.user %></li>
+        <li id="drinksName">Created by: <%= d.user %></li>
         </div>
         <li><%= d.ref %></li>
         <label>COMMENTS</label>
