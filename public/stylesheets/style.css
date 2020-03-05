@@ -1,10 +1,51 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: burlywood;
-  background-image: url("https://imgur.com/gallery/efX7W8s");
+  background-color: honeydew;
+ 
 }
 
 a {
   color: purple;
 }
+
+h1 { 
+  color : violet; 
+  font-weight: bold;
+  background-color: black;
+  }
+
+a:hover { 
+  font-weight: bold;
+  font-size: x-large;
+
+}
+
+footer { 
+  font-weight: bolder; 
+}
+
+nav { 
+  color: green;
+  font-weight: bolder;
+  font-size: x-large; 
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   }
+   
+   ul li {
+    background: none;
+    margin: 15px;
+  }
+
+  label { 
+    font-weight: bolder;
+    font-size: xx-large;
+    color: black;
+    border-style: solid;
+    
+  }
