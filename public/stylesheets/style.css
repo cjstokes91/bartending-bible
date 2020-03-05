@@ -12,16 +12,15 @@ body {
 }
 
 h1 { 
-  color : white; 
+  color : lightskyblue; 
   font-weight: bold;
-  background-color: black;
   margin-top: 0px;
   }
 
 a:hover { 
   font-weight: bold;
   font-size: x-large;
-
+  background: rgb(193, 101, 101)
 }
 
 footer { 
@@ -60,15 +59,25 @@ nav {
   div {
     text-align: justify;
   }
+  #newDrink { 
+    
+      color:lightskyblue  ;
+      font-weight: bolder;
+      font-size: 30px;
+      margin-right: 75%;
+  }
   #drinksName { 
     font-size: medium;
-    background-color: gainsboro;
+    background-color: rgb(193, 101, 101);
     width: 25%; 
     text-align: center;
     margin: auto;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 15px;  
   }
   #comments { 
-    color: navy;
+    color: black;
     font-size: xx-large;
     text-align: center;
   }
@@ -106,3 +115,4 @@ nav {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+  
