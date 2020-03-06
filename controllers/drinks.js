@@ -16,13 +16,11 @@ function index(req, res) {
 function newDrink(req, res) {
     console.log("HITTING")
     res.render('drinks/new', { title: 'New Drink', user: req.user });
-
 }
 function create(req, res) {
     console.log("HITTING CREATE")
     req.body.user = req.user.name
     const drink = new Drink(req.body);
-
     drink.save(function (err) {
         if (err) {
             console.log(err)
@@ -37,17 +35,13 @@ function show(req, res) {
         res.render('drinks/show', { drink, user: req.user })
     });
 }
-
 function deleteDrink(req, res) {
-    // drink.user = req.user._id; 
     Drink.findByIdAndDelete(req.params.id, function (err, deleteDrink) {
         console.log("Delete Drink: ", deleteDrink)
         res.redirect('/drinks');
     })
 };
-
 function editDrink(req, res) {
-    // drink.user = req.user._id; 
     Drink.findByIdAndUpdate(req.params.id, req.body, function (err, editDrink) {
         console.log("Edit Drink: ", editDrink)
         res.redirect('/drinks');
