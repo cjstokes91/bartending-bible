@@ -1,6 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgba(200, 206, 200, 0.543);
+  /* background-color: rgba(200, 206, 200, 0.543); */
 }
 .container {
   flex-direction: row;
