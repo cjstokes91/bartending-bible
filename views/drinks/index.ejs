@@ -1,37 +1,35 @@
 <%- include("../partials/header") %>
 <h1><%= title %></h1>
 <a id="newDrink" href="/drinks/new">Add New Drink</a>
-<ul>
-
+<ul id="box1">
     <% drinks.forEach(d => { %>
-        <% if(user) { %>
-            <% if (user.name === d.user) { %>
-            <form action="/drinks/<%= d._id %>?_method=DELETE" class="delete-form" method="POST">
-                <button type="submit">Delete Drink</button>
-            </form>
-            <%  } else { %>
-                <% } %>
-        <div id="userName">
-            <li id="comments"> <%=  d.name %> </li>
-        </div>
-        <li id="drinksName">Added By: <%= d.user %></li>
-        </div>
-        <li><%= d.ref %></li>
-        <label>COMMENTS</label>
-        <% if(d.comments.length){ %> 
-            <% d.comments.forEach(c => { %>
-                
-              <li><%= c.content %></li>
-           <%  }) %>
-        <% } %>
-        <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
-        <section>
-            <form id="add-comment-form" method="POST" action="/drinks/<%= d._id %>/comments">
-                <textarea name="content"></textarea>
-                <input type="submit" value="Add Comment">
-            </form>
-        </section>
-        <% } %>
+    <% if(user) { %>
+    <% if (user.name === d.user) { %>
+    <%  } else { %>
+    <% } %>
+    <div id="userName">
+        <li id="comments"> <%=  d.name %> </li>
+    </div>
+    <li id="drinksName">Added By: <%= d.user %></li>
+    </div>
+    <li><%= d.ref %></li>
+    <label>COMMENTS</label>
+    <% if(d.comments.length){ %>
+    <% d.comments.forEach(c => { %>
+    <li><%= c.content %></li>
+    <%  }) %>
+    <% } %>
+    <li><a href="/drinks/<%= d._id %>">Whats in it??</a> </li>
+    <section>
+        <form id="add-comment-form" method="POST" action="/drinks/<%= d._id %>/comments">
+            <textarea name="content"></textarea>
+            <input type="submit" value="Add Comment">
+        </form>
+        <form action="/drinks/<%= d._id %>?_method=DELETE" class="delete-form" method="POST">
+            <button id="delete" type="submit">Delete Drink</button>
+        </form>
+    </section>
+    <% } %>
     <% }) %>
 </ul>
 <%- include("../partials/footer") %>

@@ -3,64 +3,62 @@ body {
   background-color: white;
   text-align: center;
 }
-
+.container {
+  flex-direction: row;
+  display: flex;
+}
 #newDrink  {
   color:lightsteelblue;
   font-weight: bolder;
   font-size: 30px;
   margin-right: 75%;
 }
-
 h1 { 
   color : lightskyblue; 
   font-weight: bold;
   margin-top: 0px;
   }
-
 a:hover { 
   font-weight: bold;
   font-size: x-large;
   background: rgb(193, 101, 101)
 }
-
 footer { 
   font-weight: bolder; 
 }
-
 nav { 
   position: fixed;
   color: floralwhite;
   font-weight: bolder;
   font-size: x-large; 
   }
-
   footer {
     bottom: 0;
     width: 100%;
     font-size: x-large;
     font-weight: bolder;
     border: white;
-    color: white;
+    color: black;
    }
-   
+   li{ 
+     font-size: medium;
+     background-color: black;
+   }
    ul li {
     background: none;
     margin: 15px;
-  }
-
+   }
   label { 
     font-weight: bolder;
     font-size: large;
     color: white;
     background-color: black;
     border-style: solid;
-    
   }
   div {
     text-align: justify;
   }
   #newDrink { 
-    
       color:lightskyblue  ;
       font-weight: bolder;
       font-size: 30px;
@@ -71,7 +69,7 @@ nav {
     background-color: rgb(193, 101, 101);
     width: 25%; 
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
     font-weight: bolder;
     font-size: 20px;
     border-radius: 15px;  
@@ -79,13 +77,15 @@ nav {
   #comments { 
     color: black;
     font-size: xx-large;
-    text-align: center;
+    /* text-align: center; */
   }
   #userName  {
     font-weight: bolder;
     font-size: x-large;
   }
-  
+  #home{ 
+    margin-right: 95%;
+  }
   textarea {
     resize: none;
     border: 1px solid #EEEEEE;
@@ -115,4 +115,20 @@ nav {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-  
+  #show {
+    font-size: 20px;
+    margin-left: 47%; 
+    text-align: center; 
+    
+  }
+
+  input { 
+    color: black;
+  }
+#delete { 
+  color: red; 
+}
+#box1 { 
+  text-align: left;
+  margin: right;
+}
