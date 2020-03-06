@@ -2,11 +2,12 @@
 <a id="newDrink" href="/drinks/new">Add New Drink</a>
 <h1><%= title %></h1>
 <ul>
-<section class="drinkBox"
   <% drinks.forEach(d => { %>
      <% if(user) { %>
           <% if (user.name === d.user) { %>
          <form action="/drinks/<%= d._id %>?_method=DELETE" class="delete-form" method="POST">
+          <button id="delete" type="submit">Delete Drink</button>
+        </form>
           <%  } else { %>
             <% } %>
             <div id="userName">
@@ -28,9 +29,6 @@
                   <input type="submit" value="Add Comment">
                 </form>
               </section>
-              <button id="delete" type="submit">Delete Drink</button>
-             </form>
-</section >
         <% } %>
     <% }) %>
 </ul>

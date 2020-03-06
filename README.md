@@ -5,4 +5,10 @@ Technologies: MongoDB, Mongoose, Vanilla JavaScript, node.js, express, ejs, HTML
 
 Trello: https://trello.com/b/Bavv0Wn7/project-2-bartending-bible
 
-Heroku: 
+Heroku: https://bartending-bible.herokuapp.com/
+
+github: https://github.com/cjstokes91/bartending-bible
+
+icebox: I would like to provide a search bar , a like button , and a way to upload pictures of drinks that you make, also provide profile features. 
+
+
