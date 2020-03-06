@@ -4,13 +4,13 @@
 <section id="show-page">
   <h1>YOUR DRINK</h1>
   <ul id="show">  
-    <div><strong>NAME:<%= drink.name %></strong></div>
-    <div><strong>ALCOHOL:<%= drink.alcohol %></strong></div>
-    <div><strong>MIX:<%= drink.mix %></strong></div>
-    <div><strong>INSTRUCTIONS:<%= drink.instructions %></strong></div>
+    <div><strong>NAME: <%= drink.name %></strong></div>
+    <div><strong>ALCOHOL: <%= drink.alcohol %></strong></div>
+    <div><strong>MIX: <%= drink.mix %></strong></div>
+    <div><strong>INSTRUCTIONS: <%= drink.instructions %></strong></div>
   </ul>
 </section>
-<% if(user.email == drink.user) { %>
+<% if(user.name == drink.user) { %>
 
   <form id="edit-drink-form" action="/drinks/<%= drink._id %>/update/" method="POST">
   <label>Name</label>
